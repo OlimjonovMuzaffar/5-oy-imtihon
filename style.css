@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap");
+
+:root {
+  --text: #111517;
+  --bg-cards: #fff;
+  --bg-color: #f2f2f2;
+}
+
+.dark-mode {
+  --text: #fff;
+  --bg-cards: #2b3844;
+  --bg-color: #202c36;
+  transition: all 0.2s linear;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+html {
+  height: 100%;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: flex;
+}
+
+main {
+  flex-grow: 1;
+}
+button {
+  border: none;
+  background-color: inherit;
+  outline: none;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  font-size: 14px;
+  color: var(--text);
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 80px;
+}
+
+.header {
+  width: 100%;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+  background-color: var(--bg-cards);
+  padding: 2.4rem 0;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 2.4rem;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.tungi__rejim {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.31;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.moon {
+  cursor: pointer;
+}
+
+.suun {
+  cursor: pointer;
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4.8rem 0;
+}
+
+.search__input {
+  width: 100%;
+  max-width: 480px;
+  background-color: var(--bg-cards);
+  border-radius: 5px;
+  padding: 1.8rem 1rem 1.8rem 7.4rem;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: top 19px left 32px;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+  outline: none;
+  border: none;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.selectImg {
+  color: var(--text);
+}
+
+.search__select {
+  width: 200px;
+  background-color: var(--bg-cards);
+
+  padding: 1.8rem 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  cursor: pointer;
+  line-height: 1.4;
+  font-weight: 400;
+  position: relative;
+}
+
+.select-categories {
+  width: 100%;
+  max-width: 197px;
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 5px;
+  background: var(--bg-cards);
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  right: -1px;
+  top: 60px;
+  color: var(--text);
+  user-select: none;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1;
+  padding: 10px 0;
+}
+
+.select-categories .select-category {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.select-categories .select-category {
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+@media screen and (max-width: 870px) {
+  .search {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .search__select {
+    margin-top: 4rem;
+  }
+}
+
+.cards {
+  padding-bottom: 4.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 7.5rem;
+}
+.cards__item {
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: var(--bg-cards);
+}
+a {
+  color: inherit;
+}
+
+.cards__item img {
+  width: 100%;
+  height: auto;
+  height: 170px;
+  object-fit: cover;
+}
+
+.population {
+  color: var(--text);
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 114.286% */
+}
+.cards__item-inner {
+  padding: 10px;
+}
+.cards__title {
+  margin-bottom: 1.6rem;
+  font-weight: 800;
+}
+.cards__item p:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+.cards__item p {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 576px) {
+  .country-info__img {
+    width: 100%;
+    height: auto;
+  }
+  .header {
+    padding: 3rem 0;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+    color: var(--text);
+    font-weight: 800;
+  }
+
+  .header__dark-mode {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .search__input {
+    max-width: 350px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.main {
+  padding-top: 82px;
+}

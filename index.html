@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="./images/site-icon.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Countries</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <a class="logo" href="/">Where in the world?</a>
+        <button class="header__dark-mode">
+          <div class="dfSvg">
+            <i style="color: var(--text)" class="fa-regular fa-moon fa-xl moon "></i>
+            <i style="color: var(--text)" class="fa-regular fa-sun fa-xl hidden suun"></i>
+
+            <span id="dark-id" style="color: var(--text)">Dark Mode</span>
+          </div>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <form class="search">
+          <input
+            style="font-size: 15px; line-height: 20px"
+            class="search__input"
+            type="searchName"
+            id="searchName"
+            placeholder="Search for a country…"
+            required
+            autocomplete="off"
+          />
+          <div class="search__select">
+            <span class="selectTitle">Filter by Region</span>
+
+            <div class="select-categories hidden">
+              <span class="select-category">All</span
+              ><span class="select-category">Asia</span
+              ><span class="select-category">Oceania</span
+              ><span class="select-category">Europe</span
+              ><span class="select-category">Africa</span
+              ><span class="select-category">Americas</span
+              ><span class="select-category">Antarctic</span>
+            </div>
+          </div>
+        </form>
+
+        <ul class="cards"></ul>
+      </div>
+    </main>
+
+    <script type="module" src="./filter.js"></script>
+    <script type="module" src="./search.js"></script>
+    <script type="module" src="./request.js"></script>
+    <script type="module" src="./dark-mode.js"></script>
+    <script type="module" src="./select.js"></script>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
