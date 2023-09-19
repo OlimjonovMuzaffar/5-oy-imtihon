@@ -1,5 +1,5 @@
 import getData from "./request.js";
-import searchFunc  from "./search.js";
+import {searchFunc} from "./search.js";
 import UpdateUI from "./app.js";
 
 searchFunc()
